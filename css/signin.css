@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Centered authentication forms */
+.auth-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Main container with equal width sections */
+.container {
+    display: flex;
+    width: 950px;
+    background: #fff;
+    border: 4px solid #4e34b6;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image section (equal width to form) */
+.form-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form section (equal width to image) */
+.content {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #4e34b6;
+    margin-bottom: 25px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    background: #F7D197;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Input focus effect */
+input:focus {
+    background: transparent;
+    border: 3px solid #F7D197;
+}
+
+/* Authentication buttons */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+    background: #4e34b6;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #3b2593;
+    transform: scale(1.08);
+}
+
+/* Account section */
+.account {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #555;
+}
+
+.account a {
+    color: #4e34b6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.account a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .form-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 40px;
+    }
+}

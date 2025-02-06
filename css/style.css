@@ -1,0 +1,258 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    background: transparent;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #112F64;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #4e34b6;
+    text-decoration: none;
+}
+
+/* Button Styling */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.yellow-btn {
+    background: #F7D197;
+    color: black;
+    border: 2px solid #F7D197;
+    transition: all 0.3s ease-in-out;
+}
+
+.yellow-btn:hover {
+    background: transparent;
+    color: black;
+}
+
+.logout-btn {
+    background: #F7D197;
+    color: black;
+    border: 2px solid #F7D197;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: transparent;
+    color: black;
+    border: 2px solid #F7D197;
+}
+
+/* Analytics Section */
+.statistics {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.stat-box {
+    text-align: center;
+    background: #112F64;
+    padding: 30px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.stat-text {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Table Section */
+.tasks {
+    text-align: center;
+    margin-top: 40px;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #F7D197;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.approved {
+    color: green;
+}
+
+.pending {
+    color: orange;
+}
+
+.action-btn {
+    background: #112F64;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.action-btn:hover {
+    background: #fff;
+    color: black;
+    border: 2px solid #0a1f3d;
+}
+
+/* Log Hours Form */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 600px;
+}
+
+.form-container {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #112F64;
+}
+
+/* Input and Textarea Styling */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    background: #F7D197;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus, 
+textarea:focus {
+    background: transparent;
+    border: 3px solid #F7D197;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #112F64;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 20px; 
+}
+
+/* Submit and Close Buttons */
+.submit-btn, .close-btn {
+    width: 100%; 
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn {
+    background: #112F64;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #0a1f3d;
+}
+
+.close-btn {
+    background: red;
+    color: white;
+}
+
+.close-btn:hover {
+    background: darkred;
+}
