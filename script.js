@@ -17,3 +17,28 @@ document.querySelectorAll('.action-btn').forEach(button => {
         xhr.send('id=' + logId);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".action-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let logId = this.getAttribute("data-id");
+
+            fetch("approve_hours.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ log_id: logId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Hours Approved!");
+                    location.reload(); // Refresh page to update status
+                } else {
+                    alert("Error approving hours.");
+                }
+            });
+        });
+    });
+});

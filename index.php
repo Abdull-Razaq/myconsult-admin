@@ -73,6 +73,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Don't have an account?
                     <a href="register.php">Sign Up</a>
                 </p>
+                <p class="account">
+                    A Superadmin <!-- Super Admin Login Button -->
+<a href="superadmin/superadmin_login.php" class="superadmin-button">Super Admin Login</a>
+
+                </p>
             </div>
         </div>
     </div>

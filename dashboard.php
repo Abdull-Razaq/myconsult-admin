@@ -40,8 +40,13 @@ $hours_monthly = $result_monthly->fetch_row()[0];
 // Fetch log entries to display in the table
 $query_logs = "SELECT lh.id, lh.date, lh.task_name, lh.hours, lh.task_description, lh.status, u.username 
                FROM log_hours lh
-               JOIN users u ON lh.user_id = u.id";  // Assuming user_id in log_hours references users
-$result_logs = $conn->query($query_logs);
+               JOIN users u ON lh.user_id = u.id
+               WHERE u.reviewer_id = ?";
+$stmt_logs = $conn->prepare($query_logs);
+$stmt_logs->bind_param("i", $admin_id);
+$stmt_logs->execute();
+$result_logs = $stmt_logs->get_result();
+
 ?>
 
 <!DOCTYPE html>
@@ -56,13 +61,15 @@ $result_logs = $conn->query($query_logs);
 
       <!-- Navbar -->
       <nav class="navbar">
-        <div class="nav-container">
-            <h1 class="logo" id="greeting">Hi, <?php echo htmlspecialchars($admin_name); ?></h1>
-            <div class="nav-buttons">
-                <button class="btn logout-btn"><a href="logout.php">Log Out</a></button>
-            </div>
+    <div class="nav-container">
+        <h1 class="logo" id="greeting">Hi, <?php echo htmlspecialchars($admin_name); ?></h1>
+        <div class="nav-buttons">
+            <a href="view_consultants.php" class="btn">View Consultants</a>
+            <a href="logout.php" class="btn logout-btn">Log Out</a>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
 
     <!-- Analytics Section -->
@@ -72,11 +79,11 @@ $result_logs = $conn->query($query_logs);
             <p class="stat-text">Consultants</p>
         </div>
         <div class="stat-box">
-            <span class="stat-number"><?php echo $hours_today; ?></span>
+            <span class="stat-number"><?php echo $hours_today; ?>0</span>
             <p class="stat-text">Hours Today</p>
         </div>
         <div class="stat-box">
-            <span class="stat-number"><?php echo $hours_weekly; ?></span>
+            <span class="stat-number"><?php echo $hours_weekly; ?>0</span>
             <p class="stat-text">Hours This Week</p>
         </div>
         <div class="stat-box">
