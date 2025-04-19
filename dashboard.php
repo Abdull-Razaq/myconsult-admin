@@ -79,11 +79,11 @@ $result_logs = $stmt_logs->get_result();
             <p class="stat-text">Consultants</p>
         </div>
         <div class="stat-box">
-            <span class="stat-number"><?php echo $hours_today; ?>0</span>
+            <span class="stat-number"><?php echo $hours_today; ?></span>
             <p class="stat-text">Hours Today</p>
         </div>
         <div class="stat-box">
-            <span class="stat-number"><?php echo $hours_weekly; ?>0</span>
+            <span class="stat-number"><?php echo $hours_weekly; ?></span>
             <p class="stat-text">Hours This Week</p>
         </div>
         <div class="stat-box">

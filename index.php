@@ -69,14 +69,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <button type="submit">Log In</button>
                 </form>
 
-                <p class="account">
+                <!-- <p class="account">
                     Don't have an account?
                     <a href="register.php">Sign Up</a>
-                </p>
+                </p> -->
                 <p class="account">
-                    A Superadmin <!-- Super Admin Login Button -->
-<a href="superadmin/superadmin_login.php" class="superadmin-button">Super Admin Login</a>
+                    A Superadmin? <!-- Super Admin Login Button -->
+                <a href="superadmin/superadmin_login.php" >Super Admin Login</a>
+                </p>
 
+                <p class="account">
+                    A normal user?
+                    <a href="user/user_login.php">User Login</a>
                 </p>
             </div>
         </div>

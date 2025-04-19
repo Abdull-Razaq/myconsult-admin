@@ -2,8 +2,8 @@
 include '../php/db_connect.php';
 session_start();
 
-if (!isset($_SESSION['admin_id'])) {
-    header("Location: login.php");
+if (!isset($_SESSION['super_admin_id'])) {
+    header("Location: superadmin_login.php");
     exit();
 }
 
@@ -84,13 +84,13 @@ $reviewersResult = $conn->query($reviewersQuery);
 <!-- Assign Reviewer Pop-up -->
 <div id="assignReviewerPopup" class="popup-form">
     <div class="popup-content">
-        <span class="close-btn" onclick="closeAssignPopup()">&times;</span>
+        <span class="submit-btn" onclick="closeAssignPopup()">&times;</span>
         <h2>Assign Reviewer</h2>
         <form action="assign_reviewer.php" method="POST">
             <input type="hidden" name="user_id" id="user_id">
             <label for="reviewer_id">Select Reviewer:</label>
             <select name="reviewer_id" id="reviewer_id" required>
-                <option value="">Select Reviewer</option>
+                <option value="">Reviewer Name</option>
                 <?php
                 // Fetch all reviewers
                 $reviewersQuery = "SELECT id, username FROM admins";

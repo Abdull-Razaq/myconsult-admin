@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <p class="account">
                     Don't have an account?
-                    <a href="superadmin_register.php">Sign Up</a>
+                    <a href="superadmin_register.php">Register</a>
                 </p>
             </div>
         </div>
